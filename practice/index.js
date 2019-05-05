@@ -1,2 +1,4 @@
 // import './instance'
-import './lifestyle'
+// import './lifestyle'
+// import './data-binding'
+import './computed'
