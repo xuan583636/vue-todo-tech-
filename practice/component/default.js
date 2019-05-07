@@ -2,9 +2,11 @@ import Vue from 'vue'
 
 const component = {
   props: {
-    active: Boolean,
-    propOne: String,
-    onChange: Function
+    active: {
+      type: Boolean,
+      required: true
+    },
+    propOne: String
   },
   template: `
     <div>
@@ -20,7 +22,7 @@ const component = {
   },
   methods: {
     handleChange () {
-      this.onChange()
+      this.$emit('aaachange')
     }
   }
 }
@@ -31,7 +33,7 @@ new Vue({
   el: '#rooter',
   template: `
   <div>
-    <cmp-one :active="true" :prop-one="prop1" :on-change="handleChange"></cmp-one>
+    <cmp-one :active="true" :prop-one="prop1" @aaachange="handleChange"></cmp-one>
     <cmp-one :active="false"></cmp-one>
   </div>
   `,
