@@ -4,7 +4,14 @@ new Vue({
   el: '#rooter',
   template: `
     <div>
-      <p>Obj.a:<input type='text' v-model="obj.a"></p>
+      <p>Name:{{name}}</p>
+      <p>Number:{{number}}</p>
+      <p>fullName:{{fullName}}</p>
+      <p><input type='text' v-model="number"></p>
+      <p>firstName:<input type='text' v-model="firstName"></p>
+      <p>lastName:<input type='text' v-model="lastName"></p>
+      <p>Name:<input type='text' v-model="name"></p>
+
     </div>
     `,
   data: {
@@ -12,17 +19,11 @@ new Vue({
     lastName: 'Lou',
     number: 0,
     fullName: '',
-    obj: {
-      a: '123'
-    }
+    name: ''
   },
   watch: {
-    'obj.a': {
-      handler (newValue, oldValue) {
-        console.log('obj.a')
-      },
-      immediate: true,
-      deep: true
+    firstName (newName, oldName) {
+      this.fullName = newName + '' + this.lastName
     }
   }
 })

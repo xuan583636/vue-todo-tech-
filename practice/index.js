@@ -2,4 +2,5 @@
 // import './lifestyle'
 // import './data-binding'
 // import './computed'
-import './derective'
+// import './derective'
+import './component/default'
