@@ -3,4 +3,6 @@
 // import './data-binding'
 // import './computed'
 // import './derective'
-import './component/default'
+// import './component/default'
+// import './component/extend'
+import './component/vmodel'
