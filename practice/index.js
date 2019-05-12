@@ -5,4 +5,5 @@
 // import './derective'
 // import './component/default'
 // import './component/extend'
-import './component/vmodel'
+// import './component/vmodel'
+import './component/feture'
