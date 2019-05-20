@@ -2,13 +2,14 @@
   <div id="app">
     <div id="cover"></div>
     <Header></Header>
-    <router-link to="/app/iii" >app</router-link>
+    <router-link to="/app" >app</router-link>
     <router-link to='/login'>login</router-link>
     <!-- <todo></todo> -->
     <transition name="fade">
       <router-view />
     </transition>
     <Footer></Footer>
+    <router-view name="behindFooter"/>
   </div>
 </template>
 

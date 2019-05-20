@@ -10,7 +10,10 @@ export default [
     // path: '/app/:id',
     // props: (route) => ({ id: route.query.name }),
     path: '/app',
-    component: Todo,
+    components: {
+      default: Todo,
+      behindFooter: Login
+    },
     name: 'app',
     meta: {
       title: 'this is an app',
@@ -25,6 +28,9 @@ export default [
   },
   {
     path: '/login',
-    component: Login
+    components: {
+      default: Login,
+      behindFooter: Todo
+    }
   }
 ]
