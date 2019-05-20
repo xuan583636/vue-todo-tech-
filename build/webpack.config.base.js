@@ -8,6 +8,7 @@ const config = {
   entry: path.join(__dirname, '../client/index.js'),
   output: {
     filename: 'bundle.[hash:8].js',
+    publicPath: '/public/',
     path: path.join(__dirname, '../dist')
   },
   module: {
