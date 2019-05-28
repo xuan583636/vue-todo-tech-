@@ -14,12 +14,8 @@
         v-model="toggle"
       >
     </div>
-    <test       
-      label="姓名"
-      class="username-input"
-      placeholder="Enter your username"
-      data-date-picker="activated"
-      cdhoaoc="deeee"
+    <test      
+      v-model="searchText"
       >
     </test>
     <div>ooo:{{inputText}}</div>
