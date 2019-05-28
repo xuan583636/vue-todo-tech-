@@ -1,5 +1,5 @@
-// import Todo from './../views/todo/todo.vue'
-// import Login from './../views/login/login.vue'
+import Todo from './../views/todo/todo.vue'
+import Login from './../views/login/login.vue'
 
 export default [
   {
@@ -11,7 +11,8 @@ export default [
     // props: (route) => ({ id: route.query.name }),
     props: true,
     // path: '/app',
-    component: import('../views/todo/todo.vue'),
+    // component: import('../views/todo/todo.vue'),
+    component: Todo,
     name: 'app',
     meta: {
       title: 'this is an app',
@@ -24,6 +25,6 @@ export default [
   },
   {
     path: '/login',
-    component: './../views/login/login.vue'
+    component: Login
   }
 ]
