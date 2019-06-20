@@ -23,21 +23,32 @@
         </div>
       </new-inlin>
     </div>
+    <test
+      v-model="searchText"
+      >
+    </test>
+    <div>ooo:{{inputText}}</div>
+    <nm-test v-bind.sync="newOption"></nm-test>
+    <p>智力： {{ newOption.wisdom }}</p>
+    <p>攻击 {{ newOption.attack }}</p>
   </div>
 </template>
 
 <script>
-import SelfVModel from "./selfVModel.vue";
-import Test from "./test.vue";
-import NewInlin from "./newinlin.vue";
-import data from "./../../assets/data/boundry.js";
+import Test from './test.vue'
+import NmTest from './nmTest.vue'
 export default {
   data() {
     return {
-      selected: "A",
-      toggle: "",
-      inputText: "",
-      searchText: "",
+      selected: 'A',
+      toggle:'',
+      inputText:'',
+      searchText:'',
+      syncValu:'',
+      newOption: {
+        wisdom:1,
+        attack:99
+      },
       options: [
         { value: "A", text: "One" },
         { value: "B", text: "Two" },
@@ -90,17 +101,14 @@ export default {
   computed: {},
 
   watch: {
-    searchText(newV) {
-      console.log(this.searchText);
+    searchText(newV,oldV){
+      this.inputText = newV +1
+      console.log(this.inputText)
     }
   },
-  mounted() {
-    this.formalData();
-  },
-  components: {
-    SelfVModel,
+  components:{
     Test,
-    NewInlin
+    NmTest
   }
 };
 </script>
